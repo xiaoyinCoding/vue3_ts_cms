@@ -66,7 +66,7 @@ function loginAction(isRemPwd: boolean) {
       const name = account.name
       const password = account.password
       //2. send a network request to the server with an account and password.
-      loginStore.loginAccountAction({ name, password }).then((res) => {
+      loginStore.loginAccountAction({ name, password }).then(() => {
         if (isRemPwd) {
           localCache.setCache(CACHE_NAME, name)
           localCache.setCache(CACHE_PASSWORD, password)

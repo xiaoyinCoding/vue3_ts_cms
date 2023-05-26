@@ -1,6 +1,16 @@
 <template>
   <div class="PanePhone">
-    <h2>PanePhone</h2>
+    <el-form label-width="60px" size="large">
+      <el-form-item label="手机号">
+        <el-input />
+      </el-form-item>
+      <el-form-item label="验证码">
+        <div class="verity-code">
+          <el-input />
+          <el-button class="get-btn" type="primary">获取验证码</el-button>
+        </div>
+      </el-form-item>
+    </el-form>
   </div>
 </template>
 
@@ -9,5 +19,13 @@
 <style lang="less" scoped>
 .PanePhone {
   color: red;
+}
+
+.verity-code {
+  display: flex;
+
+  .get-btn {
+    margin-left: 8px;
+  }
 }
 </style>
